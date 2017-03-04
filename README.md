@@ -46,6 +46,52 @@ echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
 
 * Run `start-proj.sh` to view your service's catalog page
 
+**Note** On service deployer credentials
+
+* Your service deployment user needs to belong to a group with the following policies:
+
+* Access to the configuration bucket
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::assign9-config/*"
+        }
+    ]
+}
+```
+* Permissions to deploy to the ECS cluster
+
+```json
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecs:DescribeServices",
+                "ecs:DescribeTaskDefinition",
+                "ecs:DescribeTasks",
+                "ecs:ListTaskDefinitions",
+                "ecs:ListTasks",
+                "ecs:RegisterTaskDefinition",
+                "ecs:DeregisterTaskDefinition",
+                "ecs:UpdateService"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 ### 5. Setup your project in travis
 
 * Set the following environment variables
