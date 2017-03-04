@@ -60,3 +60,5 @@ echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
  AWS_DEFAULT_REGION     # THE AWS region where your cluster is located
  AWS_ACCESS_KEY_ID      # The service deployer keyid for your service
  AWS_SECRET_ACCESS_KEY  # The service deployer secret key for your service
+ ```
+
