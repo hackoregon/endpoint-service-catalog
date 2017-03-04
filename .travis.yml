@@ -1,0 +1,10 @@
+# create a travis env variable to get the first 6 chars of the git commit hash. $TRAVIS_COMMIT has the full hash value.
+sudo: required
+services:
+  - docker
+before_install:
+  - ./bin/config-build-container.sh
+script:
+  - ./bin/build-proj.sh
+after_success:
+  - ./bin/push.sh
