@@ -1,4 +1,4 @@
-## Hack Oregon API Service Catalog Service
+## Hack Oregon End Point Service Catalog
 
 ## Purpose
 Simple static catalog of the the Hack Oregon service end points
@@ -7,6 +7,7 @@ Simple static catalog of the the Hack Oregon service end points
 
 * Docker or Docker toolkit
 * Travis-CI
+* Cluster deployment keys. - Contact the DevOps team
 
 ## How to build
 
@@ -18,7 +19,7 @@ Simple static catalog of the the Hack Oregon service end points
 #! /bin/bash
 # Setup Project Specfics - Make sure env.sh is in the .gitignore and .dockerignore
 export DOCKER_REPO=<YOUR REPO>
-export DOCKER_IMAGE=endpoint-service
+export DOCKER_IMAGE=<the name of your service>
 export DOCKER_USERNAME=<YOUR DOCKER Repository USER NAME>
 export DOCKER_PASSWORD=<YOUR DOCKER Repository PASSWORD>
 export ECS_CLUSTER=<THE NAME OF YOUR ECS CLUSTER>
@@ -33,15 +34,21 @@ echo DOCKER_PASWORD: $DOCKER_PASSWORD
 echo ECS_CLUSTER: $ECS_CLUSTER
 echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
 ```
-### 2. Run `source env.sh` to setup your environment
+### 2. Setup your local environment
 
-### 3. Make changes to the `index.html` to reflect new services
+* Run `source env.sh` to setup your environment
 
-### 4. Run `build-proj.sh`  to build the ContainerName
+### 3. Build the container
 
-### 5. Run `start-proj.sh` to view your service's catalog page
+* Run `build-proj.sh`  to build the Container
 
-### 6. Setup your project in travis-ci with the following environment variables
+### 4. Start the project
+
+* Run `start-proj.sh` to view your service's catalog page
+
+### 5. Setup your project in travis
+
+* Set the following environment variables
 
 ```bash
  DOCKER_REPO            # Your docker repository
@@ -53,8 +60,3 @@ echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
  AWS_DEFAULT_REGION     # THE AWS region where your cluster is located
  AWS_ACCESS_KEY_ID      # The service deployer keyid for your service
  AWS_SECRET_ACCESS_KEY  # The service deployer secret key for your service
-```
-
-**IMPORTANT** Make sure that you don't store AWS or Docker repository credentials in your github repo or expose them in travis
-
-### 7. Commit and push your code and ensure travis builds and deploys correctly
