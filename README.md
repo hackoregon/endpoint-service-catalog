@@ -1,19 +1,20 @@
-## Hack Oregon End Point Service Catalog
+# Hack Oregon End Point Service Catalog
 
 ## Purpose
-Simple static catalog of the the Hack Oregon service end points
+
+Simple static catalog of the the Hack Oregon APIs and endpoints.
 
 ## Dependencies
 
 * Docker or Docker toolkit
 * Travis-CI
-* Cluster deployment keys. - Contact the DevOps team
+* AWS ECS Cluster deployment keys (Contact the DevOps team)
 
-## How to build
+## How to build (locally)
 
 ### 1.  Create Your Environment file
 
-* Create `env.sh` in the project with the following contents:
+* Create `env.sh` in the project with the following contents (replacing `<variables>`:
 
 ```bash
 #! /bin/bash
@@ -23,7 +24,7 @@ export DOCKER_IMAGE=<the name of your service>
 export DOCKER_USERNAME=<YOUR DOCKER Repository USER NAME>
 export DOCKER_PASSWORD=<YOUR DOCKER Repository PASSWORD>
 export ECS_CLUSTER=<THE NAME OF YOUR ECS CLUSTER>
-export ECS_SERVICE_NAME=<THE NAME OF THE SERVICE YOUR DEPLOYING TO>
+export ECS_SERVICE_NAME=<THE NAME OF THE SERVICE YOU ARE DEPLOYING TO>
 echo "##############################"
 echo  Your Local Project Environment
 echo "##############################"
@@ -34,9 +35,10 @@ echo DOCKER_PASWORD: $DOCKER_PASSWORD
 echo ECS_CLUSTER: $ECS_CLUSTER
 echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
 ```
+
 ### 2. Setup your local environment
 
-* Run `source env.sh` to setup your environment
+* Run `source env.sh` to setup your local environment
 
 ### 3. Build the container
 
@@ -67,6 +69,7 @@ echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
     ]
 }
 ```
+
 * Permissions to deploy to the ECS cluster
 
 ```json
@@ -92,12 +95,13 @@ echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
 }
 ```
 
-### 5. Setup your project in travis
+### 5. Setup your project in Travis
 
 * Set the following environment variables
 
 ```bash
  DOCKER_REPO            # Your docker repository
+ DOCKER_REPO_NAMESPACE  # production
  DOCKER_IMAGE           # endpoint-service
  DOCKER_USERNAME        # Your Docker Repository user name
  DOCKER_PASSWORD        # Your Docker Repository password
@@ -108,3 +112,7 @@ echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
  AWS_SECRET_ACCESS_KEY  # The service deployer secret key for your service
  ```
 
+## How to deploy (to AWS)
+
+1. Make a trivial commit to this repo, once Travis-CI.com project has been configured.
+2. Merge the commit in github to master.
