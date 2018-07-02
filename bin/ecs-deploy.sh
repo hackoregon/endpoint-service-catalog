@@ -325,7 +325,7 @@ done
 NEW_DEF=$(echo $DEF | jq "{${NEW_DEF_JQ_FILTER}}")
 
 # Register the new task definition, and store its ARN
-NEW_TASKDEF=`$AWS_ECS register-task-definition --cli-input-json "$NEW_DEF" | jq -r .taskDefinition.taskDefinitionArn`
+  NEW_TASKDEF=`$AWS_ECS register-task-definition --cli-input-json "$NEW_DEF" | jq -r .taskDefinition.taskDefinitionArn`
 echo "New task definition: $NEW_TASKDEF";
 
 if [ $SERVICE == false ]; then
