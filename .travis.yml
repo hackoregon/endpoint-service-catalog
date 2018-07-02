@@ -8,7 +8,7 @@ install:
   - pip install --upgrade awscli
 
 script:
-  - ./bin/build-proj.sh
+  - ./bin/build.sh
 
 after_success:
-  - ./bin/push.sh
+  - ./bin/deploy.sh
