@@ -1,10 +1,10 @@
 FROM nginx
 
-VOLUME /usr/share/nginx/html
+VOLUME /usr/share/nginx/html/endpoints
 
 VOLUME /etc/nginx
 
-COPY index.html /usr/share/nginx/html/index.html
+COPY index.html /usr/share/nginx/html/endpoints/index.html
 
 COPY /config/default.conf /etc/nginx/conf.d
 
