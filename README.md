@@ -19,19 +19,17 @@ Simple static catalog of the the Hack Oregon APIs and endpoints.
 ```bash
 #! /bin/bash
 # Setup Project Specfics - Make sure env.sh is in the .gitignore and .dockerignore
-export DOCKER_REPO=<YOUR REPO>
 export DOCKER_IMAGE=<the name of your service>
-export DOCKER_USERNAME=<YOUR DOCKER Repository USER NAME>
-export DOCKER_PASSWORD=<YOUR DOCKER Repository PASSWORD>
+export DOCKER_REPO=<YOUR REPO>
+export DOCKER_REPO_NAMESPACE=<namespace> - currently "production"
 export ECS_CLUSTER=<THE NAME OF YOUR ECS CLUSTER>
 export ECS_SERVICE_NAME=<THE NAME OF THE SERVICE YOU ARE DEPLOYING TO>
 echo "##############################"
 echo  Your Local Project Environment
 echo "##############################"
-echo DOCKER_REPO: $DOCKER_REPO
 echo DOCKER_IMAGE: $DOCKER_IMAGE
-echo DOCKER_USERNAME: $DOCKER_USERNAME
-echo DOCKER_PASWORD: $DOCKER_PASSWORD
+echo DOCKER_REPO: $DOCKER_REPO
+echo DOCKER_REPO_NAMESPACE: $DOCKER_REPO_NAMESPACE
 echo ECS_CLUSTER: $ECS_CLUSTER
 echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
 ```
