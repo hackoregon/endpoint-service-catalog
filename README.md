@@ -14,7 +14,7 @@ Simple static catalog of the the Hack Oregon APIs and endpoints.
 
 ### 1.  Create Your Environment file
 
-* Create `env.sh` in the project with the following contents (replacing `<variables>`:
+* Create `env.sh` in the project with the following contents replacing `<variables>`:
 
 ```bash
 #! /bin/bash
