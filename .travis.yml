@@ -4,6 +4,9 @@ sudo: required
 services:
   - docker
 
+python:
+  - "3.7"
+
 install:
   - pip install --upgrade awscli
 
