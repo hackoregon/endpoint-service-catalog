@@ -110,6 +110,7 @@ a {
   cursor: pointer;
   opacity: 0.9;
   transition: all .25s ease-in-out;
+  border-bottom: 2px solid;
 }
 
 a:hover {
@@ -216,6 +217,11 @@ p {
   overflow-y: hidden;
 }
 
+.collectionPageWrapper a {
+  color: white;
+  opacity: 1;
+}
+
 .collectionPageWrapper h1 {
   font-size: 60px;
   line-height: 1.2;
@@ -247,17 +253,8 @@ p {
   font-family: 'Rubik';
   text-transform: uppercase;
   letter-spacing: 3px;
+  color: rgba(238,73,92,1);
 }
-
-.itemStyle {
-  background-color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-}
-
-.itemStyle h2, h3 {
-    color: black;
-} 
 
 .sideListWrapper {
   display: block;
@@ -275,23 +272,27 @@ p {
   overflow-y: scroll;  
 }
 
-.sideListWrapper li:hover {
-  opacity: 0.8;
-}
-
 .sideListWrapper li {
-  padding: 20px 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0;
   margin: 20px;
   box-sizing: border-box;
   text-decoration: none;
-  border: none;
-  transition: opacity .4s ease-in-out;
   border: 1px solid #DDD;
   border-radius: 2px;
   box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.2);
+  background-color: white;
 }
 
 .sideListWrapper h2 {
+  color: black;
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.cellText {
   color: black;
   font-family: 'Rubik', sans-serif;
   font-size: 24px;
@@ -303,14 +304,55 @@ p {
   margin-bottom: 20px;
 }
 
-.homeLink a {
-  border: none;
+.github {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 0px 20px;  
+  box-sizing: border-box;
+  width: 80px;
+  background-color: rgba(170,164,171,1);  
+  text-align: center;
 }
 
-.github {
-  width: 60px;
-  padding: 0 0 0 10px;
-  margin-bottom: 20px;  
+.github :hover {
+  opacity: 0.8;
+}
+
+.swagger {
+  display: flex;
+  align-items: center;  
+  align-content: center;
+  padding: 0px 20px;  
+  box-sizing: border-box;
+  width: 80px;
+  background-color: rgba(32,16,36, 1);  
+  text-align: center;
+}
+
+.swagger :hover {
+  opacity: 0.8;
+}
+
+.itemLeft {
+  flex: 1;
+  padding: 20px;
+}
+
+table {
+  border-spacing: 6px;
+}
+
+td {
+  padding-bottom: -50px;
+}
+
+.tableNumber {
+  text-align: right;
+}
+
+.stats {
+  list-style: none;
 }
 
 @media (max-width: 850px) {
@@ -344,5 +386,9 @@ p {
 
   .sideListWrapper h2 {
     font-size: 20px;
-  }    
+  }
+
+  .cellText {
+    font-size: 20px;
+  }        
 }
