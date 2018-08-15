@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+/*global css*/
+
+/* Base */
+
+html {
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #fffefe;
+  font-family: 'Merriweather';
+  font-weight: 400;
+  color: #001732;
+  min-height: 100% /* [3] */;
+  -webkit-text-size-adjust: 100% /* [4] */;
+  -ms-text-size-adjust: 100% /* [4] */;
+  -moz-osx-font-smoothing: grayscale /* [5] */;
+  -webkit-font-smoothing: antialiased /* [5] */;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.font-extra-light {
+  font-weight: 100;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-bold {
+  font-weight: 600;
+}
+.font-extra-bold {
+  font-weight: 800;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.btc-text-onyx {
+  color: #001732 !important;
+  fill: #001732 !important;
+}
+
+.btc-text-light {
+  color: #f7f7f7 !important;
+  fill: #f7f7f7 !important;
+}
+
+.btc-text-warn {
+  color: #DE0050!important;
+  fill: #DE0050 !important
+}
+
+.btc-bg-onyx {
+  background-color: #001732;
+  border-color: #001732;
+}
+.btc-bg-yellow {
+  background: #ffb45a;
+}
+.btc-bg-action {
+  background-color: #e91e63;
+}
+.btc-bg-white {
+  background-color: #fff;
+}
+.btc-bg-black {
+  background-color: #000;
+}
+.btc-text-uppercase {
+  text-transform: uppercase;
+}
+.btc-text-black {
+  color: #000 !important;
+  fill: #000 !important;
+}
+.btc-text-white {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+/* utitlity */
+.btc-rounded {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.btc-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+a {
+  color: rgba(238,73,80,1);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all .25s ease-in-out;
+  border-bottom: 2px solid;
+}
+
+a:hover {
+  color: rgba(238,73,80,1);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Global Styles from product_design */
+
+/* Typography */
+.Description {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.Title {
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 300;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 12px;
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+h2,
+.h2 {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 2.125rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+h3,
+.h3 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+h4,
+.h4 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+h5,
+.h5 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+h6,
+.h6 {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1em;
+  color: #706371;
+}
+
+.Pullquote {
+  font-size: 40px;
+}
+
+/* Color */
+
+.PrimaryColor {
+  color: rgba(34,15,37,1);
+  fill: rgba(34,15,37,1);
+}
+
+.SecondaryColor {
+  color: rgba(238,73,92,1);
+  fill: rgba(238,73,92,1);
+}
+
+/*collection page specific*/
+
+.collectionPageWrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.collectionPageWrapper a {
+  color: white;
+  opacity: 1;
+}
+
+.collectionPageWrapper h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.leftContainer {
+  position: fixed;
+  width: 50%;
+  padding: 60px;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.subCopy {
+  display: block;
+  font-family: 'Rubik',sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 20px 0;
+  color: black;
+  letter-spacing: auto;
+}
+
+.teamTitleStyle {
+  display: block;
+  font-size: 15px;
+  font-family: 'Rubik';
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(238,73,92,1);
+}
+
+.sideListWrapper {
+  display: block;
+  margin-top: 60px;
+  margin-left: 50%;  
+}
+
+.sideListWrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 100vh;
+  background-color: white;
+  min-width: 320px;
+  overflow-y: scroll;  
+}
+
+.sideListWrapper li {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0;
+  margin: 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 1px solid #DDD;
+  border-radius: 2px;
+  box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.sideListWrapper h2 {
+  color: black;
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.cellText {
+  color: black;
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.homeLink {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 0px 20px;  
+  box-sizing: border-box;
+  width: 80px;
+  background-color: rgba(170,164,171,1);  
+  text-align: center;
+}
+
+.github :hover {
+  opacity: 0.8;
+}
+
+.swagger {
+  display: flex;
+  align-items: center;  
+  align-content: center;
+  padding: 0px 20px;  
+  box-sizing: border-box;
+  width: 80px;
+  background-color: rgba(32,16,36, 1);  
+  text-align: center;
+}
+
+.swagger :hover {
+  opacity: 0.8;
+}
+
+.itemLeft {
+  flex: 1;
+  padding: 20px;
+}
+
+table {
+  border-spacing: 6px;
+}
+
+td {
+  padding-bottom: -50px;
+}
+
+.tableNumber {
+  text-align: right;
+}
+
+.stats {
+  list-style: none;
+}
+
+@media (max-width: 850px) {
+  .collectionPageWrapper h1 {
+    font-size: 50px;
+  }
+
+  .leftContainer {
+    position: relative;
+    width: 100%;
+    padding: 24px 36px;
+  }
+
+  .subCopy {
+    font-size: 16px;
+  }
+
+  .teamTitleStyle {
+    font-size: 13px;    
+  }
+
+  .sideListWrapper {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .sideListWrapper ul {
+    overflow-y: auto;
+    height: auto;
+  }  
+
+  .sideListWrapper h2 {
+    font-size: 20px;
+  }
+
+  .cellText {
+    font-size: 20px;
+  }        
+}
